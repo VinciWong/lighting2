@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harmony Lighting</title>
+<style>
+:root{--navy:#1b2a5e;--blue:#3d4875;--grey:#e1e2dd;--ink:#3a3d45;--bg:#fff;--card:#fff;--ph:#c9cbd1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12172b;--ink:#d8dae3;--grey:#1d2440;--navy:#e8ebf7;--card:#242c4d;--ph:#323b63}}
+:root[data-theme="dark"]{--bg:#12172b;--ink:#d8dae3;--grey:#1d2440;--navy:#e8ebf7;--card:#242c4d;--ph:#323b63}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Helvetica Neue",Arial,sans-serif}
+h1,h2,h3{font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;color:var(--navy);font-weight:700;line-height:1.15;margin:0 0 .5em}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;align-items:center;gap:24px;padding:10px 5vw;border-bottom:1px solid var(--ph)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);text-decoration:none;letter-spacing:.04em}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--blue);display:block;border:4px solid #b9bbc0}
+nav{margin-left:auto;display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:flex-end}
+nav a{color:#7b7f8c;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.04em;padding:4px 0;border-bottom:2px solid transparent}
+nav a.on{color:var(--navy);border-color:var(--navy)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.hero{height:min(48vh,420px);background:var(--grey);display:grid;place-items:center;color:var(--navy);font-size:2rem;letter-spacing:.1em}
+section{padding:56px 6vw}
+.in{max-width:1000px;margin:auto}
+.grey{background:var(--grey);color:var(--ink)}
+.blue{background:var(--blue);color:#fff}.blue h1,.blue h2,.blue h3{color:#fff}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);text-align:center;margin-bottom:1em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.ph{background:var(--ph);aspect-ratio:1;display:grid;place-items:center;font-weight:700;color:var(--navy)}
+.stats{display:flex;gap:32px;margin:18px 0;flex-wrap:wrap}.stats b{display:block;font-size:1.8rem;color:var(--navy)}
+.btn{display:inline-block;background:#fff;color:var(--blue);font-weight:700;padding:12px 32px;border-radius:6px;border:0;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.d{background:var(--navy);color:#fff}
+:root[data-theme="dark"] .btn.d,:root:not([data-theme="light"]) .btn.d{color:#12172b}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px}
+.svc h3{font-size:1.05rem;text-transform:uppercase;margin:.9em 0 .3em}.svc p{margin:0;opacity:.9;font-size:.95rem}
+.ic{width:60px;height:60px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--blue);font-weight:800}
+.vid{aspect-ratio:16/9;background:#1e1e1e;display:grid;place-items:center;max-width:860px;margin:auto}
+.play{width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;color:#fff;font-size:2rem}
+.item{text-align:center;font-size:.9rem}.item .ph{aspect-ratio:1}
+.team{display:flex;flex-wrap:wrap;gap:36px;justify-content:center}
+.team div{width:200px;text-align:center}.av{width:170px;height:170px;border-radius:50%;background:var(--blue);margin:0 auto 12px}
+form{max-width:440px;margin:0 auto 48px;display:grid;gap:14px}
+label{font-weight:700;color:var(--navy);display:grid;gap:6px}
+input,textarea{padding:11px;border:2px solid var(--ph);border-radius:6px;font:inherit;background:var(--card);color:var(--ink);width:100%}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center}
+.contact h3{margin-top:.6em}
+footer{background:var(--blue);color:#fff;text-align:center;padding:24px;font-size:.85rem}
+.pg{display:none}.pg.on{display:block}
+@media (max-width:640px){header{flex-direction:column;align-items:flex-start;gap:6px}nav{margin:0;justify-content:flex-start}}
+</style></head><body>
+<header><a class="logo" href="#about"><i></i>HARMONY</a>
+<nav id="nav"></nav></header>
+<main>
+<div class="pg" id="about">
+ <div class="hero">Image</div>
+ <section><div class="in"><h2>About Us</h2>
+ <p>Founded in 1989, Harmony Lighting has spent more than three decades helping lighting businesses around the world grow with confidence. We are more than a sourcing partner—we are a long-term extension of our clients’ teams, combining deep market knowledge, dependable execution, and hands-on support throughout every stage of the lighting supply chain.</p>
+ <p>With offices in Hong Kong, Shenzhen, and Guzhen, we provide end-to-end expertise in product sourcing, supply-chain management, engineering support, quality control, production coordination, shipping arrangements, and payment coordination. Our permanent team of lighting specialists has an average tenure of more than 12 years, while our long-term network includes over 500 audited factories. Many of our clients have grown with us from emerging businesses into leading international companies.</p>
+ <p>Today, Harmony Lighting combines this industry expertise with LightingAI, our proprietary AI-powered lighting sourcing and order-management platform. We help buyers identify matching products and verified manufacturers through intelligent search and data-driven recommendations.</p>
+ <p>Beyond sourcing, we provide a central platform for tracking orders, production status, product adjustments, documents, QC reports, and ETD/ETA updates. It also delivers price benchmarking, quality-risk insights, supplier recommendations, and market-trend analysis—making lighting procurement faster, more transparent, and more reliable.</p></div></section>
+ <section class="grey"><div class="in"><h2>Who We Are</h2>
+ <h3>Harmony Lighting Development Ltd.</h3>
+ <div class="stats"><span><b>1989</b>Founded</span><span><b>30+</b>Countries</span><span><b>200+</b>Projects</span></div>
+ <p>One-stop lighting solutions from consultation to delivery.</p></div></section>
+ <section class="blue" style="text-align:center"><div class="in"><h2>Our Gallery</h2><div class="grid" id="g3"></div><br><a class="btn" href="#gallery">View Gallery</a></div></section>
+</div>
+<div class="pg" id="service">
+ <div class="hero">Image</div>
+ <section class="blue"><div class="in"><h2>Service</h2><div class="svc" id="svc"></div></div></section>
+</div>
+<div class="pg" id="lightingai">
+ <div class="hero">Image</div>
+ <section><div class="in"><h2>LightingAI</h2><p style="text-align:center;max-width:640px;margin:0 auto 40px">Description</p>
+ <div class="vid"><div class="play">▶</div></div></div></section>
+</div>
+<div class="pg" id="product">
+ <div class="hero">Image</div>
+ <section><div class="in"><h2>New Product</h2><p style="text-align:center">Description of New Product</p></div></section>
+ <section class="grey"><div class="in"><h2>Indoor Lighting</h2><div class="grid" id="in"></div></div></section>
+ <section class="blue"><div class="in"><h2>Outdoor Lighting</h2><div class="grid" id="out"></div></div></section>
+</div>
+<div class="pg" id="team">
+ <div class="hero">Image</div>
+ <section><div class="in"><h2>Our Team</h2><div class="team" id="tm"></div></div></section>
+</div>
+<div class="pg" id="contact">
+ <div class="hero">Image</div>
+ <section><div class="in"><h2>Contact Us</h2>
+ <p style="text-align:center;margin-bottom:32px">Contact us with any questions about our products or to find a supplier in your area. Please fill out the form below and we’ll get back to you in a timely manner.</p>
+ <form id="f"><label>First name<input required></label><label>Last name<input required></label><label>Email<input type="email" required></label><label>Message<textarea rows="6" required></textarea></label><button class="btn d" type="submit">Submit</button><p id="ok" role="status" style="margin:0;color:var(--navy);font-weight:700"></p></form></div></section>
+ <section class="grey"><div class="in contact">
+ <div><div class="ic" style="margin:auto;background:var(--blue);color:#fff">⌖</div><h3>Address</h3>XXXXXXXX</div>
+ <div><div class="ic" style="margin:auto;background:var(--blue);color:#fff">✉</div><h3>Email</h3>XXXXXXXX</div>
+ <div><div class="ic" style="margin:auto;background:var(--blue);color:#fff">☎</div><h3>Phone</h3>XXXXXXXX</div></div></section>
+</div>
+<div class="pg" id="gallery">
+ <section><div class="in"><h2>Lighting Gallery</h2><p style="text-align:center;margin-bottom:32px">This is the Description of the Gallery</p><div class="grid" id="g15"></div></div></section>
+</div>
+</main>
+<footer>© Harmony Lighting Development Ltd.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const pages=[["about","About Us"],["service","Service"],["lightingai","LightingAI"],["product","New Product"],["team","Our Team"],["contact","Contact Us"]];
+$("nav").innerHTML=pages.map(p=>`<a href="#${p[0]}" data-p="${p[0]}">${p[1]}</a>`).join("");
+const ph=n=>Array(n).fill('<div class="ph">Image</div>').join("");
+$("g3").innerHTML=ph(3);$("g15").innerHTML=ph(15);
+const prod=Array(6).fill('<div class="item"><div class="ph">Image</div>Number<br>Color &nbsp; Cm</div>').join("");
+$("in").innerHTML=prod;$("out").innerHTML=prod;
+$("tm").innerHTML=Array(5).fill('<div><div class="av"></div><b>Name</b><br>Post</div>').join("");
+const S=[["Product & Technical Consultation","Browse and advise on a wide category of lighting products and provide technical support."],["Product & Technical Design","3D rendering photo artwork and customized packaging box design."],["Pre-Production Sample","Used to test the design, functionality, and quality of the product before mass production."],["Quality Management","Supplier quality management, factory field audit, production inspection, quality control, sample testing and evaluation."],["Logistical Coordination","Arrange a shipping forwarder at a good price and get a full report before shipment."],["Good After Sales Service","No headache even if something goes wrong. We are always here for you."]];
+$("svc").innerHTML=S.map((s,i)=>`<div><div class="ic">${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+$("f").onsubmit=e=>{e.preventDefault();$("ok").textContent="Thank you. We will get back to you soon.";e.target.reset()};
+function route(){let h=location.hash.slice(1)||"about";if(!$(h))h="about";
+document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===h));
+document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.p===h||(h==="gallery"&&a.dataset.p==="about")));scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+</script></body></html>
